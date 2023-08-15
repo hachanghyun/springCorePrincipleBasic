@@ -30,6 +30,9 @@ https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-compl
     You can use '--warning-mode all' to show the individual deprecation warnings and determine 
     if they come from your own scripts or plugins.
 
+    File > Invalidate Caches 에 들어가서 
+    'Invalidate and Restart' 로 해결
+
 
 
 
