@@ -27,7 +27,8 @@ https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-compl
     
 #### Gradle 오류 
     Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0. 
-    You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+    You can use '--warning-mode all' to show the individual deprecation warnings and determine 
+    if they come from your own scripts or plugins.
 
 
 
