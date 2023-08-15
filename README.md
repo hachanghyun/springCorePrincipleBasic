@@ -16,8 +16,18 @@ https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-compl
     Artifact : core
     Name : core
     Packaging : jar
-    Java ver : 11
+    Java -version : openjdk version "11.0.20" 2023-07-18
     Dependencies : x
+
+#### intellij java 버전 변경
+    File => Project Structure
+
+#### preference 들어가서 gradle 입력
+    Build Tool : gradle => Intellij 
+    
+#### Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+
 
 
 
