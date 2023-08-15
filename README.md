@@ -78,7 +78,11 @@ https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-compl
     
 <img width="966" alt="스크린샷 2023-08-15 오후 9 11 04" src="https://github.com/hachanghyun/springCorePrincipleBasic/assets/33058284/9701aa22-e107-4fa9-954b-5c08d6342f45">
 
+#### system.out.println 
+	soutv
 
+#### 프로젝트 재시작 단축키
+	control + shift + R
 
 
 
