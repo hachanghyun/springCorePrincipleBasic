@@ -74,6 +74,8 @@ https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-compl
     독립적으로 확장할 수 있으며, 구현체 클래스를 변경하거나 확장해도 이를 사용하는 클라이언트의 코드에 영향을 주지 않도록 하기 위함입니다.
     이 같은 추상화를 통한 구현 방식은 객체지향의 특징 중 하나인 다형성과 객체지향의 다섯 가지 원칙 중 하나인 OCP 원칙을 가장 
     잘 실현해주는 설계 방식이라고 할 수 있습니다.
+    
+<img width="966" alt="스크린샷 2023-08-15 오후 9 11 04" src="https://github.com/hachanghyun/springCorePrincipleBasic/assets/33058284/9701aa22-e107-4fa9-954b-5c08d6342f45">
 
 
 
