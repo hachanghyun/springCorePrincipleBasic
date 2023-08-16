@@ -87,5 +87,12 @@ https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-compl
 	option + cmd + v
 
 
+#### 메소드 testcase 생성 단축키
+	cmd + shift + T
 
+ #### assertions 비교
+ 	option + enter 치면 간결해짐
 
+  #### 과거 작업 이력 파일 조회 단축키
+  	cmd + E
+   
