@@ -1,8 +1,5 @@
 # springCorePrincipleBasic
 
-#### MAC JAVA 11 version 설치 (처음에 java17 버젼설치되있어서 버전변경하다 생쇼하다가 이거 하나로 해결!!!)
-    brew install openjdk@11
-    sudo ln-sfn $(brew --prefix)/opt/openjdk@11/libexec/openjdk.jdk
 
 #### 나중에 java17로 변경할날이 오면 이것 사용
 https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-completed-unable-to-locate-a-java-runtime-that-su
@@ -39,7 +36,6 @@ https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-compl
     패키지 및 파일 추가 cmd + N
     생성자 추가 cmd + N
     
-
 #### intellij 단축키 찾는법
     preference => keymap 들어가서 검색해서 단축키 찾으면 됨
 
@@ -85,7 +81,10 @@ https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-compl
 	control + shift + R
 
 
+<img width="937" alt="스크린샷 2023-08-16 오후 4 46 28" src="https://github.com/hachanghyun/springCorePrincipleBasic/assets/33058284/162c9d06-9c34-47d8-b8aa-008115e2ddb3">
 
+#### 앞에 return 값 담아주는 변수, 객체 자동생성해주는 단축키 (문장끝에서 쓰면 자동생성)
+	option + cmd + v
 
 
 
