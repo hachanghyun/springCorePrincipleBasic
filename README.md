@@ -85,7 +85,10 @@ https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-compl
 	control + shift + R
 
 
+<img width="937" alt="스크린샷 2023-08-16 오후 4 46 28" src="https://github.com/hachanghyun/springCorePrincipleBasic/assets/33058284/162c9d06-9c34-47d8-b8aa-008115e2ddb3">
 
+#### 앞에 return 값 담아주는 변수, 객체 자동생성해주는 단축키 (문장끝에서 쓰면 자동생성)
+	option + cmd + v
 
 
 
