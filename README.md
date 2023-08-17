@@ -104,3 +104,10 @@ https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-compl
 	`FixDiscountPolicy`
 	AppConfig는 생성한 객체 인스턴스의 참조(레퍼런스)를 **생성자를 통해서 주입(연결)**해준다. `MemberServiceImpl` `MemoryMemberRepository`
 	`OrderServiceImpl` `MemoryMemberRepository` , `FixDiscountPolicy`
+
+#### 의존관계 주입 의존성 주입(DI)
+	OrderServiceImpl은 기능을 실행하는 역할만 가지여함!!!!
+ 
+#### cmd + option + M
+ 
+#### 책임의 분리 Appconfig
