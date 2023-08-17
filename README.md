@@ -110,3 +110,4 @@ https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-compl
  
 #### cmd + option + M
  
+#### 책임의 분리 Appconfig
