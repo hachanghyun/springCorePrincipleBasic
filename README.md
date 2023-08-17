@@ -111,3 +111,61 @@ https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-compl
 #### cmd + option + M
  
 #### 책임의 분리 Appconfig
+
+#### 좋은 객체 지향 설계의 5가지 원칙 
+
+##### 1. SRP 단일 책임 원칙 
+	한 클래스는 하나의 책임만 가져야한다. 
+ 
+ ###### 2. DIP 의존관계 역전 원칙 
+ 	추상화에 의존, 구체화에 의존(x)
+  
+##### 3. OCP 소프트웨어 요소는 확장에는 열려있으니 변경에는 닫혀있어야 한다
+	애플리케이션을 사용영역과 구성영역으로 나눔 
+ 	소프트웨어 요소를 새롭게 확장해도 사용 영역의 변경은 닫혀있다. -> 클라이언트 소스를 변경할 필요가 없음
+  	외부에서 의존관계만 주입하면 끝남. 사용영역은 변경할 필요가없음.
+
+#### 스프링관련 용어 설명 
+	Inversion of Control (제어의 역전) IOC
+   
+  프레임워크(junit) vs 라이브러리 
+
+#### 의존관계주입 (DI)
+정적인 클래스 의존관계 , 실행 시점에 결정되는 동적인 객체 (인스턴스) 의존관계 둘을 분리해서 생각해야한다.
+
+IOC컨테이너, DI컨테이너로 변경
+
+
+#### 스프링으로 전환해보자!!!
+
+ApplicationContext 얘가 스프링컨테이너인데 @Bean 같이 모든객체들을 다관리해줌 
+
+MemberService memberService = applicationContext.getBean("memberService" 이객체를 찾을거야 , MemberService.class : 반환타입);
+
+22:30:06.735 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'appConfig'
+22:30:06.738 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'memberService'
+22:30:06.744 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'memberRepository'
+22:30:06.745 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'orderService'
+22:30:06.745 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'discountPolicy'
+
+스프링컨테이너가 객체를 생성해줬음 . 저이름으로 빼서 사용해주면됨!!!!
+
+`ApplicationContext` 를 스프링 컨테이너라 한다.
+기존에는 개발자가 `AppConfig` 를 사용해서 직접 객체를 생성하고 DI를 했지만, 이제부터는 스프링 컨테이너를 통해서 사용한다.
+스프링 컨테이너는 `@Configuration` 이 붙은 `AppConfig` 를 설정(구성) 정보로 사용한다. 여기서 `@Bean` 이 라 적힌 메서드를 모두 호출해서 반환된 객체를 스프링 컨테이너에 등록한다. 이렇게 스프링 컨테이너에 등록된 객체를 스프링 빈이라 한다.
+
+#### 내가 정리하기
+Bean으로 스프링컨테이너에서 관리되고 return 된 객체로 관리함
+
+
+스프링 빈은 `@Bean` 이 붙은 메서드의 명을 스프링 빈의 이름으로 사용한다. ( `memberService` ,
+       
+ `orderService` )
+이전에는 개발자가 필요한 객체를 `AppConfig` 를 사용해서 직접 조회했지만, 이제부터는 스프링 컨테이너를 통 해서 필요한 스프링 빈(객체)를 찾아야 한다. 스프링 빈은 `applicationContext.getBean()` 메서드를 사용 해서 찾을 수 있다.
+기존에는 개발자가 직접 자바코드로 모든 것을 했다면 이제부터는 스프링 컨테이너에 객체를 스프링 빈으로 등록 하고, 스프링 컨테이너에서 스프링 빈을 찾아서 사용하도록 변경되었다.
+
+
+스프링컨테이너를 사용했을때 이점이 뭘까?????? 
+왜 여기에서 bean으로 관리할까????
+
+스프링컨테이너가 주는 이점은 다음시간에 계쏙...
