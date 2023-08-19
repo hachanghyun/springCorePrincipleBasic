@@ -192,3 +192,9 @@ jUnit5 부터는 테스트코드메소드에 public 안붙여줘도됨
  
 #### cmd + E => enter 예전에 작업했던 파일 불러오기
 #### option + enter => static import 하기
+
+ **정리**
+ApplicationContext는 BeanFactory의 기능을 상속받는다.
+ApplicationContext는 빈 관리기능 + 편리한 부가 기능을 제공한다.
+BeanFactory를 직접 사용할 일은 거의 없다. 부가기능이 포함된 ApplicationContext를 사용한다. BeanFactory나 ApplicationContext를 스프링 컨테이너라 한다.
+
