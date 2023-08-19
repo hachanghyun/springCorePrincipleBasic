@@ -198,3 +198,10 @@ ApplicationContext는 BeanFactory의 기능을 상속받는다.
 ApplicationContext는 빈 관리기능 + 편리한 부가 기능을 제공한다.
 BeanFactory를 직접 사용할 일은 거의 없다. 부가기능이 포함된 ApplicationContext를 사용한다. BeanFactory나 ApplicationContext를 스프링 컨테이너라 한다.
 
+#### 싱글톤 정리
+
+memberService = hello.core.member.MemberServiceImpl@65e98b1c
+memberService2 = hello.core.member.MemberServiceImpl@61322f9d
+
+@뒤의 값은 객체주소값?
+
