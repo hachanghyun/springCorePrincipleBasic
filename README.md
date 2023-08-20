@@ -205,3 +205,6 @@ memberService2 = hello.core.member.MemberServiceImpl@61322f9d
 
 @뒤의 값은 객체주소값?
 
+
+#### 생성자에 붙여주기
+@Autowired
