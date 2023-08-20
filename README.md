@@ -208,3 +208,10 @@ memberService2 = hello.core.member.MemberServiceImpl@61322f9d
 
 #### 생성자에 붙여주기
 @Autowired
+@Autowired //ac.gettBean(MemberRepository.class);
+
+#### 컴포넌트 스캔 기본 대상
+컴포넌트 스캔은 `@Component` 뿐만 아니라 다음과 내용도 추가로 대상에 포함한다. `@Component` : 컴포넌트 스캔에서 사용
+`@Controller` : 스프링 MVC 컨트롤러에서 사용
+`@Service` : 스프링 비즈니스 로직에서 사용
+`@Repository` : 스프링 데이터 접근 계층에서 사용 `@Configuration` : 스프링 설정 정보에서 사용
