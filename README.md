@@ -1,10 +1,8 @@
 # springCorePrincipleBasic
 
-
 #### 나중에 java17로 변경할날이 오면 이것 사용
 https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-completed-unable-to-locate-a-java-runtime-that-su
  
-
 #### 실습 환경 start.spring.io
     Project : Gradle 
     Language : Java
@@ -81,13 +79,10 @@ https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-compl
 
 #### 프로젝트 재시작 단축키
 	control + shift + R
-
-
 <img width="937" alt="스크린샷 2023-08-16 오후 4 46 28" src="https://github.com/hachanghyun/springCorePrincipleBasic/assets/33058284/162c9d06-9c34-47d8-b8aa-008115e2ddb3">
 
 #### 앞에 return 값 담아주는 변수, 객체 자동생성해주는 단축키 (문장끝에서 쓰면 자동생성)
 	option + cmd + v
-
 
 #### 메소드 testcase 생성 단축키
 	cmd + shift + T
@@ -110,8 +105,6 @@ https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-compl
 #### 의존관계 주입 의존성 주입(DI)
 	OrderServiceImpl은 기능을 실행하는 역할만 가지여함!!!!
  
-#### 책임의 분리 Appconfig
-
 #### 좋은 객체 지향 설계의 5가지 원칙 
 
 ##### 1. SRP 단일 책임 원칙 
@@ -142,18 +135,8 @@ https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-compl
 	Bean으로 스프링컨테이너에서 관리되고 return 된 객체로 관리함
 
 #### 스프링 컨테이너
-
 	요즘은 XML 방식보다 애노테이션 기반의 자바설정클래스로 만들어서 사용하는게 추세
-	
-	ApplicationContext` 를 스프링 컨테이너라 한다.
-	`ApplicationContext` 는 인터페이스이다.
-	스프링 컨테이너는 XML을 기반으로 만들 수 있고, 애노테이션 기반의 자바 설정 클래스로 만들 수 있다. 직전에 `AppConfig` 를 사용했던 방식이 애노테이션 기반의 자바 설정 클	래스로 스프링 컨테이너를 만든 것이 다.
-	자바 설정 클래스를 기반으로 스프링 컨테이너( `ApplicationContext` )를 만들어보자.
-	`new AnnotationConfigApplicationContext(AppConfig.class);` 이 클래스는 `ApplicationContext` 인터페이스의 구현체이다.
-	참고: 더 정확히는 스프링 컨테이너를 부를 때 `BeanFactory` , `ApplicationContext` 로 구분해서 이야기 한다. 이 부분은 뒤에서 설명하겠다. `BeanFactory` 를 직접 사용하는 경우는 거의 없으므로 일반적으로
-	`ApplicationContext` 를 스프링 컨테이너라 한다.
-
-jUnit5 부터는 테스트코드메소드에 public 안붙여줘도됨
+	jUnit5 부터는 테스트코드메소드에 public 안붙여줘도됨
 
 #### 리스트있을시 단축키
 	iter쳐주면 for문이 자동완성됨
