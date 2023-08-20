@@ -1,10 +1,8 @@
 # springCorePrincipleBasic
 
-
 #### 나중에 java17로 변경할날이 오면 이것 사용
 https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-completed-unable-to-locate-a-java-runtime-that-su
  
-
 #### 실습 환경 start.spring.io
     Project : Gradle 
     Language : Java
@@ -36,6 +34,7 @@ https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-compl
     패키지 및 파일 추가 cmd + N
     생성자 추가 cmd + N
     cmd + o 전체찾기
+    cmd + option + M
     
 #### intellij 단축키 찾는법
     preference => keymap 들어가서 검색해서 단축키 찾으면 됨
@@ -80,13 +79,10 @@ https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-compl
 
 #### 프로젝트 재시작 단축키
 	control + shift + R
-
-
 <img width="937" alt="스크린샷 2023-08-16 오후 4 46 28" src="https://github.com/hachanghyun/springCorePrincipleBasic/assets/33058284/162c9d06-9c34-47d8-b8aa-008115e2ddb3">
 
 #### 앞에 return 값 담아주는 변수, 객체 자동생성해주는 단축키 (문장끝에서 쓰면 자동생성)
 	option + cmd + v
-
 
 #### 메소드 testcase 생성 단축키
 	cmd + shift + T
@@ -109,10 +105,6 @@ https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-compl
 #### 의존관계 주입 의존성 주입(DI)
 	OrderServiceImpl은 기능을 실행하는 역할만 가지여함!!!!
  
-#### cmd + option + M
- 
-#### 책임의 분리 Appconfig
-
 #### 좋은 객체 지향 설계의 5가지 원칙 
 
 ##### 1. SRP 단일 책임 원칙 
@@ -128,80 +120,48 @@ https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-compl
 
 #### 스프링관련 용어 설명 
 	Inversion of Control (제어의 역전) IOC
-   
-  프레임워크(junit) vs 라이브러리 
+	프레임워크(junit) vs 라이브러리 
 
 #### 의존관계주입 (DI)
-정적인 클래스 의존관계 , 실행 시점에 결정되는 동적인 객체 (인스턴스) 의존관계 둘을 분리해서 생각해야한다.
-
-IOC컨테이너, DI컨테이너로 변경
+	정적인 클래스 의존관계 , 실행 시점에 결정되는 동적인 객체 (인스턴스) 의존관계 둘을 분리해서 생각해야한다.
+	IOC컨테이너, DI컨테이너로 변경
 
 
 #### 스프링으로 전환해보자!!!
-
-ApplicationContext 얘가 스프링컨테이너인데 @Bean 같이 모든객체들을 다관리해줌 
-
-MemberService memberService = applicationContext.getBean("memberService" 이객체를 찾을거야 , MemberService.class : 반환타입);
-
-22:30:06.735 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'appConfig'
-22:30:06.738 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'memberService'
-22:30:06.744 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'memberRepository'
-22:30:06.745 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'orderService'
-22:30:06.745 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'discountPolicy'
-
-스프링컨테이너가 객체를 생성해줬음 . 저이름으로 빼서 사용해주면됨!!!!
-
-`ApplicationContext` 를 스프링 컨테이너라 한다.
-기존에는 개발자가 `AppConfig` 를 사용해서 직접 객체를 생성하고 DI를 했지만, 이제부터는 스프링 컨테이너를 통해서 사용한다.
-스프링 컨테이너는 `@Configuration` 이 붙은 `AppConfig` 를 설정(구성) 정보로 사용한다. 여기서 `@Bean` 이 라 적힌 메서드를 모두 호출해서 반환된 객체를 스프링 컨테이너에 등록한다. 이렇게 스프링 컨테이너에 등록된 객체를 스프링 빈이라 한다.
+	ApplicationContext 얘가 스프링컨테이너인데 @Bean 같이 모든객체들을 다관리해줌 
+	MemberService memberService = applicationContext.getBean("memberService" 이객체를 찾을거야 , MemberService.class : 반환타입);
 
 #### 내가 정리하기
-Bean으로 스프링컨테이너에서 관리되고 return 된 객체로 관리함
-
-
-스프링 빈은 `@Bean` 이 붙은 메서드의 명을 스프링 빈의 이름으로 사용한다. ( `memberService` ,
-       
- `orderService` )
-이전에는 개발자가 필요한 객체를 `AppConfig` 를 사용해서 직접 조회했지만, 이제부터는 스프링 컨테이너를 통 해서 필요한 스프링 빈(객체)를 찾아야 한다. 스프링 빈은 `applicationContext.getBean()` 메서드를 사용 해서 찾을 수 있다.
-기존에는 개발자가 직접 자바코드로 모든 것을 했다면 이제부터는 스프링 컨테이너에 객체를 스프링 빈으로 등록 하고, 스프링 컨테이너에서 스프링 빈을 찾아서 사용하도록 변경되었다.
-
-
-스프링컨테이너를 사용했을때 이점이 뭘까?????? 
-왜 여기에서 bean으로 관리할까????
-
-스프링컨테이너가 주는 이점은 다음시간에 계쏙...
+	Bean으로 스프링컨테이너에서 관리되고 return 된 객체로 관리함
 
 #### 스프링 컨테이너
-
-요즘은 XML 방식보다 애노테이션 기반의 자바설정클래스로 만들어서 사용하는게 추세
-
-ApplicationContext` 를 스프링 컨테이너라 한다.
-`ApplicationContext` 는 인터페이스이다.
-스프링 컨테이너는 XML을 기반으로 만들 수 있고, 애노테이션 기반의 자바 설정 클래스로 만들 수 있다. 직전에 `AppConfig` 를 사용했던 방식이 애노테이션 기반의 자바 설정 클래스로 스프링 컨테이너를 만든 것이 다.
-자바 설정 클래스를 기반으로 스프링 컨테이너( `ApplicationContext` )를 만들어보자.
-`new AnnotationConfigApplicationContext(AppConfig.class);` 이 클래스는 `ApplicationContext` 인터페이스의 구현체이다.
-참고: 더 정확히는 스프링 컨테이너를 부를 때 `BeanFactory` , `ApplicationContext` 로 구분해서 이야기 한다. 이 부분은 뒤에서 설명하겠다. `BeanFactory` 를 직접 사용하는 경우는 거의 없으므로 일반적으로
-`ApplicationContext` 를 스프링 컨테이너라 한다.
-
-jUnit5 부터는 테스트코드메소드에 public 안붙여줘도됨
+	요즘은 XML 방식보다 애노테이션 기반의 자바설정클래스로 만들어서 사용하는게 추세
+	jUnit5 부터는 테스트코드메소드에 public 안붙여줘도됨
 
 #### 리스트있을시 단축키
 	iter쳐주면 for문이 자동완성됨
 
- #### soutv 변수명 찍어주는 print문
- 
-#### cmd + E => enter 예전에 작업했던 파일 불러오기
-#### option + enter => static import 하기
+#### 기타 명령어
+	soutv 변수명 찍어주는 print문
+ 	cmd + E => enter 예전에 작업했던 파일 불러오기
+  	option + enter => static import 하기
 
- **정리**
-ApplicationContext는 BeanFactory의 기능을 상속받는다.
-ApplicationContext는 빈 관리기능 + 편리한 부가 기능을 제공한다.
-BeanFactory를 직접 사용할 일은 거의 없다. 부가기능이 포함된 ApplicationContext를 사용한다. BeanFactory나 ApplicationContext를 스프링 컨테이너라 한다.
+#### ApplicationContext 정리
+	ApplicationContext는 BeanFactory의 기능을 상속받는다.
+	ApplicationContext는 빈 관리기능 + 편리한 부가 기능을 제공한다.
+	BeanFactory를 직접 사용할 일은 거의 없다. 부가기능이 포함된 ApplicationContext를 사용한다. BeanFactory나 ApplicationContext를 스프링 컨테이너라 한다.
 
 #### 싱글톤 정리
+	memberService = hello.core.member.MemberServiceImpl@65e98b1c
+	memberService2 = hello.core.member.MemberServiceImpl@61322f9d
+ 	@뒤의 값은 객체주소값?
 
-memberService = hello.core.member.MemberServiceImpl@65e98b1c
-memberService2 = hello.core.member.MemberServiceImpl@61322f9d
+#### 생성자에 붙여주기
+	@Autowired
+	@Autowired //ac.gettBean(MemberRepository.class);
 
-@뒤의 값은 객체주소값?
-
+#### 컴포넌트 스캔 기본 대상
+	컴포넌트 스캔은 `@Component` 뿐만 아니라 다음과 내용도 추가로 대상에 포함한다. `@Component` : 컴포넌트 스캔에서 사용
+	`@Controller` : 스프링 MVC 컨트롤러에서 사용
+	`@Service` : 스프링 비즈니스 로직에서 사용
+	`@Repository` : 스프링 데이터 접근 계층에서 사용 `@Configuration` : 스프링 설정 정보에서 사용
