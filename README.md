@@ -1,8 +1,5 @@
 # springCorePrincipleBasic
 
-#### 나중에 java17로 변경할날이 오면 이것 사용
-https://stackoverflow.com/questions/71059252/mac-the-operation-couldn-t-be-completed-unable-to-locate-a-java-runtime-that-su
- 
 #### 실습 환경 start.spring.io
     Project : Gradle 
     Language : Java
