@@ -14,7 +14,7 @@
 #### intellij java 버전 변경
     File => Project Structure 
 
-#### preference 들어가서 gradle 입력
+#### preference 들어가서 gradle 입력 
     Build Tool : gradle => Intellij 
     
 #### Gradle 오류 
