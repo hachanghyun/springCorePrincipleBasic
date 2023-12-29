@@ -15,7 +15,7 @@
     File => Project Structure 
 
 #### preference 들어가서 gradle 입력 
-    Build Tool : gradle => Intellij 
+    Build Tool : gradle => Intellij  
     
 #### Gradle 오류 
     Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0. 
